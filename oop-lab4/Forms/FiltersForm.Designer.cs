@@ -1,6 +1,6 @@
 ﻿namespace oop_lab4
 {
-    partial class Form1
+    partial class FiltersForm
     {
         /// <summary>
         ///  Required designer variable.
