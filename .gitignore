@@ -1,0 +1,30 @@
+# Результаты сборки
+[Bb]in/
+[Oo]bj/
+artifacts/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Результаты тестов и покрытие
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# Старые проекты с NuGet packages.config
+packages/
+
+# Логи
+*.log
+
+# Файлы ОС
+.DS_Store
+Thumbs.db
