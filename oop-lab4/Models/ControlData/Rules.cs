@@ -96,7 +96,7 @@ public class DateInRule : FilterRule
 
     public override bool FirmRespond(Firm firm)
     {
-        return Expression.Check(firm.DateIn);
+        return Expression.Check(firm.DateIn.Date);
     }
 }
 
@@ -113,7 +113,7 @@ public class DateBegRule : FilterRule
             return false;
         }
 
-        return Expression.Check(date.Value);
+        return Expression.Check(date.Value.Date);
     }
 }
 

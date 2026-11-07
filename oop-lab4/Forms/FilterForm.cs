@@ -78,70 +78,70 @@ public partial class FilterForm : Form
         {
             if (_namePanel.IsActive())
             {
-                NameRule rule = new NameRule();
+                NameRule rule = (NameRule)new NameField().CreateRule();
                 rule.Expression = _namePanel.GetExpression();
                 rules.Add(rule);
             }
 
             if (_dateInPanel.IsActive())
             {
-                DateInRule rule = new DateInRule();
+                DateInRule rule = (DateInRule)new DateInField().CreateRule();
                 rule.Expression = _dateInPanel.GetDateExpression();
                 rules.Add(rule);
             }
 
             if (_countryPanel.IsActive())
             {
-                CountryRule rule = new CountryRule();
+                CountryRule rule = (CountryRule)new CountryField().CreateRule();
                 rule.Expression = _countryPanel.GetExpression();
                 rules.Add(rule);
             }
 
             if (_postIndexPanel.IsActive())
             {
-                PostInxRule rule = new PostInxRule();
+                PostInxRule rule = (PostInxRule)new PostInxField().CreateRule();
                 rule.Expression = _postIndexPanel.GetExpression();
                 rules.Add(rule);
             }
 
             if (_regionPanel.IsActive())
             {
-                RegionRule rule = new RegionRule();
+                RegionRule rule = (RegionRule)new RegionField().CreateRule();
                 rule.Expression = _regionPanel.GetExpression();
                 rules.Add(rule);
             }
 
             if (_townPanel.IsActive())
             {
-                TownRule rule = new TownRule();
+                TownRule rule = (TownRule)new TownField().CreateRule();
                 rule.Expression = _townPanel.GetExpression();
                 rules.Add(rule);
             }
 
             if (_streetPanel.IsActive())
             {
-                StreetRule rule = new StreetRule();
+                StreetRule rule = (StreetRule)new StreetField().CreateRule();
                 rule.Expression = _streetPanel.GetExpression();
                 rules.Add(rule);
             }
 
             if (_webPanel.IsActive())
             {
-                WebRule rule = new WebRule();
+                WebRule rule = (WebRule)new WebField().CreateRule();
                 rule.Expression = _webPanel.GetExpression();
                 rules.Add(rule);
             }
 
             if (_dateBegPanel.IsActive())
             {
-                DateBegRule rule = new DateBegRule();
+                DateBegRule rule = (DateBegRule)new DateBegField().CreateRule();
                 rule.Expression = _dateBegPanel.GetDateExpression();
                 rules.Add(rule);
             }
 
             if (_countPanel.IsActive())
             {
-                ContCountRule rule = new ContCountRule();
+                ContCountRule rule = (ContCountRule)new CountContField().CreateRule();
                 rule.Expression = _countPanel.GetIntExpression();
                 rules.Add(rule);
             }
@@ -150,9 +150,8 @@ public partial class FilterForm : Form
             {
                 if (_userPanels[i].IsActive())
                 {
-                    UsrFieldRule rule = new UsrFieldRule(
-                        _userFieldNames[i]
-                    );
+                    UsrField field = new UsrField(_userFieldNames[i]);
+                    UsrFieldRule rule = (UsrFieldRule)field.CreateRule();
 
                     rule.Expression = _userPanels[i].GetExpression();
                     rules.Add(rule);
