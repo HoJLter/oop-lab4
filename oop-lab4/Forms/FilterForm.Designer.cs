@@ -28,129 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            stringPanel = new Panel();
-            fieldLabel = new Label();
-            valueInput = new TextBox();
-            disabledCheck = new CheckBox();
-            equalRadio = new RadioButton();
-            notEqualRadio = new RadioButton();
-            containsRadio = new RadioButton();
-            notContainsRadio = new RadioButton();
-            stringPanel.SuspendLayout();
+            applyButton = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // stringPanel
+            // applyButton
             // 
-            stringPanel.Controls.Add(notContainsRadio);
-            stringPanel.Controls.Add(containsRadio);
-            stringPanel.Controls.Add(notEqualRadio);
-            stringPanel.Controls.Add(equalRadio);
-            stringPanel.Controls.Add(disabledCheck);
-            stringPanel.Controls.Add(valueInput);
-            stringPanel.Controls.Add(fieldLabel);
-            stringPanel.Location = new Point(10, 10);
-            stringPanel.Name = "stringPanel";
-            stringPanel.Size = new Size(850, 40);
-            stringPanel.TabIndex = 0;
+            applyButton.Location = new Point(14, 10);
+            applyButton.Name = "applyButton";
+            applyButton.Size = new Size(123, 29);
+            applyButton.TabIndex = 0;
+            applyButton.Text = "Применить";
+            applyButton.UseVisualStyleBackColor = true;
             // 
-            // fieldLabel
+            // panel1
             // 
-            fieldLabel.AutoSize = true;
-            fieldLabel.Location = new Point(18, 13);
-            fieldLabel.Name = "fieldLabel";
-            fieldLabel.Size = new Size(40, 15);
-            fieldLabel.TabIndex = 0;
-            fieldLabel.Text = "Город";
-            // 
-            // valueInput
-            // 
-            valueInput.Enabled = false;
-            valueInput.Location = new Point(171, 10);
-            valueInput.Name = "valueInput";
-            valueInput.Size = new Size(242, 23);
-            valueInput.TabIndex = 1;
-            valueInput.Text = "Пусто";
-            // 
-            // disabledCheck
-            // 
-            disabledCheck.AutoSize = true;
-            disabledCheck.Checked = true;
-            disabledCheck.CheckState = CheckState.Checked;
-            disabledCheck.Location = new Point(479, 12);
-            disabledCheck.Name = "disabledCheck";
-            disabledCheck.Size = new Size(44, 19);
-            disabledCheck.TabIndex = 2;
-            disabledCheck.Text = "нет";
-            disabledCheck.UseVisualStyleBackColor = true;
-            // 
-            // equalRadio
-            // 
-            equalRadio.AutoSize = true;
-            equalRadio.Checked = true;
-            equalRadio.Enabled = false;
-            equalRadio.Location = new Point(541, 11);
-            equalRadio.Name = "equalRadio";
-            equalRadio.Size = new Size(33, 19);
-            equalRadio.TabIndex = 3;
-            equalRadio.TabStop = true;
-            equalRadio.Text = "=";
-            equalRadio.UseVisualStyleBackColor = true;
-            // 
-            // notEqualRadio
-            // 
-            notEqualRadio.AutoSize = true;
-            notEqualRadio.Enabled = false;
-            notEqualRadio.Location = new Point(580, 11);
-            notEqualRadio.Name = "notEqualRadio";
-            notEqualRadio.Size = new Size(36, 19);
-            notEqualRadio.TabIndex = 4;
-            notEqualRadio.Text = "!=";
-            notEqualRadio.UseVisualStyleBackColor = true;
-            // 
-            // containsRadio
-            // 
-            containsRadio.AutoSize = true;
-            containsRadio.Enabled = false;
-            containsRadio.Location = new Point(621, 11);
-            containsRadio.Name = "containsRadio";
-            containsRadio.Size = new Size(80, 19);
-            containsRadio.TabIndex = 5;
-            containsRadio.Text = "Содержит";
-            containsRadio.UseVisualStyleBackColor = true;
-            // 
-            // notContainsRadio
-            // 
-            notContainsRadio.AutoSize = true;
-            notContainsRadio.Enabled = false;
-            notContainsRadio.Location = new Point(707, 12);
-            notContainsRadio.Name = "notContainsRadio";
-            notContainsRadio.Size = new Size(96, 19);
-            notContainsRadio.TabIndex = 6;
-            notContainsRadio.Text = "Не содержит";
-            notContainsRadio.UseVisualStyleBackColor = true;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(applyButton);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(924, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(144, 649);
+            panel1.TabIndex = 1;
             // 
             // FilterForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(874, 450);
-            Controls.Add(stringPanel);
+            ClientSize = new Size(1068, 649);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FilterForm";
             Text = "FilterForm";
-            stringPanel.ResumeLayout(false);
-            stringPanel.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel stringPanel;
-        private TextBox valueInput;
-        private Label fieldLabel;
-        private RadioButton notContainsRadio;
-        private RadioButton containsRadio;
-        private RadioButton notEqualRadio;
-        private RadioButton equalRadio;
-        private CheckBox disabledCheck;
+        private Button applyButton;
+        private Panel panel1;
     }
 }

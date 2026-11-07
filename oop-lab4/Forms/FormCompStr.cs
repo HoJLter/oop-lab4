@@ -19,7 +19,7 @@ public class FrmCompStr : Panel
     {
         Name = "stringPanel" + index;
         Location = new Point(10, y);
-        Size = new Size(850, 40);
+        Size = new Size(900, 40);
 
         fieldLabel = new Label();
         fieldLabel.Name = "fieldLabel" + index;
@@ -51,19 +51,19 @@ public class FrmCompStr : Panel
         notEqualRadio.Name = "notEqualRadio" + index;
         notEqualRadio.Text = "!=";
         notEqualRadio.AutoSize = true;
-        notEqualRadio.Location = new Point(580, 11);
+        notEqualRadio.Location = new Point(595, 11);
 
         containsRadio = new RadioButton();
         containsRadio.Name = "containsRadio" + index;
         containsRadio.Text = "Содержит";
         containsRadio.AutoSize = true;
-        containsRadio.Location = new Point(621, 11);
+        containsRadio.Location = new Point(650, 11);
 
         notContainsRadio = new RadioButton();
         notContainsRadio.Name = "notContainsRadio" + index;
         notContainsRadio.Text = "Не содержит";
         notContainsRadio.AutoSize = true;
-        notContainsRadio.Location = new Point(707, 12);
+        notContainsRadio.Location = new Point(750, 11);
 
         Controls.Add(fieldLabel);
         Controls.Add(valueInput);
