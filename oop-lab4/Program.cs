@@ -21,8 +21,6 @@ internal static class Program
 
         List<Firm> firms = new List<Firm>();
 
-        // Демонстрационные данные, не реальные реквизиты компаний.
-
         Firm firm1 = FirmFactory.Instance.Create();
         firm1.Name = "Яндекс";
         firm1.Country = "Россия";
